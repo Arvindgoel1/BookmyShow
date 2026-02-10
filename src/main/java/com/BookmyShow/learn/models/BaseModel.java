@@ -2,12 +2,14 @@ package com.BookmyShow.learn.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @MappedSuperclass
 public class BaseModel
 {
