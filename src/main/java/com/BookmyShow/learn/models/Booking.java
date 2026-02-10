@@ -24,7 +24,7 @@ public class Booking extends BaseModel
     @Enumerated(EnumType.STRING)
     private BookingStatus status;
 
-    @ManyToMany
+    @OneToMany(mappedBy = "booking")
     private List<ShowSeat> seats;
 }
 

@@ -2,8 +2,11 @@ package com.BookmyShow.learn.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -17,6 +20,9 @@ public class Seat extends BaseModel
 
     @ManyToOne
     private SeatType seatType;
+
+    @OneToMany(mappedBy = "seat")
+    private List<ShowSeat> showSeats;
 }
 
 /*
